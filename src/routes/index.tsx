@@ -310,9 +310,9 @@ function Index() {
       {/* Projetos */}
       <section
         id="projetos"
-        className="relative bg-paper py-20 sm:py-28 overflow-hidden"
+        className="relative bg-ink text-paper py-20 sm:py-28 overflow-hidden"
       >
-        <div className="absolute -left-10 bottom-10 text-[15rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden lg:block -rotate-90">
+        <div className="absolute -left-10 bottom-10 text-[15rem] leading-none font-display text-paper/5 select-none pointer-events-none hidden lg:block -rotate-90">
           DOSSIER
         </div>
         <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
