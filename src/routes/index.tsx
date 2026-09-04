@@ -232,21 +232,21 @@ function Index() {
             <span className="border border-ink/30 px-2 py-1">Front-end</span>
           </div>
 
-          <div className="grid lg:grid-cols-[1fr_280px] gap-10 items-start">
+          <div className="grid lg:grid-cols-[1fr_240px] gap-8 items-start">
             <div>
-              <h1 className="font-display text-[17vw] sm:text-[13vw] md:text-[9.5rem] leading-[0.82] tracking-tighter text-balance">
+              <h1 className="font-display text-[15vw] sm:text-[11vw] md:text-[7rem] leading-[0.82] tracking-tighter text-balance">
                 <span className="distressed-text block">ARIN</span>
                 <span className="block text-ink -ml-2">KURAMOTO</span>
               </h1>
 
-              <div className="mt-4 relative inline-block">
+              <div className="mt-3 relative inline-block">
                 <span className="tape-strip -top-3 -left-6 -rotate-12" />
-                <p className="font-mono text-base sm:text-lg uppercase tracking-wide text-ink">
+                <p className="font-mono text-sm sm:text-base uppercase tracking-wide text-ink">
                   Designer de UX — interfaces quebradas, re-grudadas e legíveis.
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wide">
+              <div className="mt-6 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wide">
                 <a
                   href="#projetos"
                   className="bg-ink text-paper px-4 py-2.5 hover:bg-grunge-blood transition-colors"
