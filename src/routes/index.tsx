@@ -214,7 +214,7 @@ function Index() {
       {/* Hero */}
       <header
         id="top"
-        className="relative min-h-screen overflow-hidden bg-paper pt-24 pb-16"
+        className="relative overflow-hidden bg-paper pt-24 pb-0"
       >
         <div className="absolute -top-10 -left-6 text-[18rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden md:block">
           UX
