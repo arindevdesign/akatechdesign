@@ -318,14 +318,14 @@ function Index() {
         <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
           <div className="flex items-end justify-between mb-10 gap-4">
             <div>
-              <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-blood mb-3">
+              <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-accent mb-3">
                 // projetos selecionados
               </div>
-              <h2 className="font-display text-5xl sm:text-6xl leading-[0.9] tracking-tight text-ink">
+              <h2 className="font-display text-5xl sm:text-6xl leading-[0.9] tracking-tight text-paper">
                 Trabalho no papel.
               </h2>
             </div>
-            <span className="font-mono text-xs uppercase tracking-wide text-ink-soft whitespace-nowrap">
+            <span className="font-mono text-xs uppercase tracking-wide text-paper/60 whitespace-nowrap">
               (04 arquivos)
             </span>
           </div>
