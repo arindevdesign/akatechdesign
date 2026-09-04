@@ -214,12 +214,12 @@ function Index() {
       {/* Hero */}
       <header
         id="top"
-        className="relative min-h-screen overflow-hidden bg-paper pt-24 pb-16"
+        className="relative overflow-hidden bg-paper pt-24 pb-0"
       >
-        <div className="absolute -top-10 -left-6 text-[18rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden md:block">
+        <div className="absolute -top-8 -left-6 text-[12rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden md:block">
           UX
         </div>
-        <div className="absolute bottom-24 right-2 text-[10rem] leading-none font-display text-grunge-blood/10 select-none pointer-events-none hidden lg:block rotate-6">
+        <div className="absolute bottom-16 right-2 text-[7rem] leading-none font-display text-grunge-blood/10 select-none pointer-events-none hidden lg:block rotate-6">
           90s
         </div>
 
@@ -232,21 +232,21 @@ function Index() {
             <span className="border border-ink/30 px-2 py-1">Front-end</span>
           </div>
 
-          <div className="grid lg:grid-cols-[1fr_280px] gap-10 items-start">
+          <div className="grid lg:grid-cols-[1fr_240px] gap-8 items-start">
             <div>
-              <h1 className="font-display text-[17vw] sm:text-[13vw] md:text-[9.5rem] leading-[0.82] tracking-tighter text-balance">
+              <h1 className="font-display text-[15vw] sm:text-[11vw] md:text-[7rem] leading-[0.82] tracking-tighter text-balance">
                 <span className="distressed-text block">ARIN</span>
                 <span className="block text-ink -ml-2">KURAMOTO</span>
               </h1>
 
-              <div className="mt-4 relative inline-block">
+              <div className="mt-3 relative inline-block">
                 <span className="tape-strip -top-3 -left-6 -rotate-12" />
-                <p className="font-mono text-base sm:text-lg uppercase tracking-wide text-ink">
+                <p className="font-mono text-sm sm:text-base uppercase tracking-wide text-ink">
                   Designer de UX — interfaces quebradas, re-grudadas e legíveis.
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wide">
+              <div className="mt-6 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-wide">
                 <a
                   href="#projetos"
                   className="bg-ink text-paper px-4 py-2.5 hover:bg-grunge-blood transition-colors"
@@ -285,20 +285,24 @@ function Index() {
         </div>
 
         {/* Marquee */}
-        <div className="absolute bottom-6 inset-x-0 overflow-hidden border-y border-ink/20 py-2 bg-paper-2">
+        <div className="relative mt-10 overflow-hidden border-y border-ink/20 py-2 bg-paper-2">
           <div className="marquee-track flex whitespace-nowrap font-mono text-xs uppercase tracking-[0.3em] text-ink-soft">
-            <span className="px-4">Grunge refinado ✕</span>
-            <span className="px-4">Zine 90s ✕</span>
-            <span className="px-4">Ray Gun ✕</span>
-            <span className="px-4">Brutalismo web ✕</span>
-            <span className="px-4">Skate art ✕</span>
-            <span className="px-4">Xerox ✕</span>
-            <span className="px-4">Grunge refinado ✕</span>
-            <span className="px-4">Zine 90s ✕</span>
-            <span className="px-4">Ray Gun ✕</span>
-            <span className="px-4">Brutalismo web ✕</span>
-            <span className="px-4">Skate art ✕</span>
-            <span className="px-4">Xerox ✕</span>
+            {[0, 1].map((dup) =>
+              [
+                "UX/UI",
+                "Front-end",
+                "Figma",
+                "JavaScript",
+                "React",
+                "Design Thinking",
+                "Service Design",
+                "UX Writing",
+              ].map((word) => (
+                <span key={`${dup}-${word}`} className="px-4">
+                  {word} ✕
+                </span>
+              )),
+            )}
           </div>
         </div>
       </header>
@@ -306,22 +310,22 @@ function Index() {
       {/* Projetos */}
       <section
         id="projetos"
-        className="relative bg-paper py-20 sm:py-28 overflow-hidden"
+        className="relative bg-ink text-paper py-20 sm:py-28 overflow-hidden"
       >
-        <div className="absolute -left-10 bottom-10 text-[15rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden lg:block -rotate-90">
+        <div className="absolute -left-10 bottom-10 text-[15rem] leading-none font-display text-paper/5 select-none pointer-events-none hidden lg:block -rotate-90">
           DOSSIER
         </div>
         <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
           <div className="flex items-end justify-between mb-10 gap-4">
             <div>
-              <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-blood mb-3">
+              <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-accent mb-3">
                 // projetos selecionados
               </div>
-              <h2 className="font-display text-5xl sm:text-6xl leading-[0.9] tracking-tight text-ink">
+              <h2 className="font-display text-5xl sm:text-6xl leading-[0.9] tracking-tight text-paper">
                 Trabalho no papel.
               </h2>
             </div>
-            <span className="font-mono text-xs uppercase tracking-wide text-ink-soft whitespace-nowrap">
+            <span className="font-mono text-xs uppercase tracking-wide text-paper/60 whitespace-nowrap">
               (04 arquivos)
             </span>
           </div>
@@ -332,7 +336,7 @@ function Index() {
                 "grunge-card group relative p-5 cursor-pointer";
               const variantClasses =
                 project.variant === "dark"
-                  ? "bg-ink text-paper rotate-1 sm:mt-8"
+                  ? "bg-ink text-paper ring-1 ring-paper/25 rotate-1 sm:mt-8"
                   : project.variant === "accent"
                     ? "bg-grunge-accent text-ink -rotate-1"
                     : project.variant === "blood"
@@ -391,14 +395,14 @@ function Index() {
       {/* Sobre */}
       <section
         id="sobre"
-        className="relative bg-ink text-paper py-20 sm:py-28 overflow-hidden"
+        className="relative bg-paper text-ink py-20 sm:py-28 overflow-hidden"
       >
-        <div className="absolute -right-10 top-10 text-[16rem] leading-none font-display text-paper/5 select-none pointer-events-none hidden lg:block rotate-90">
+        <div className="absolute -right-10 top-10 text-[16rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden lg:block rotate-90">
           MEU
         </div>
         <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5 relative">
-            <div className="relative bg-paper-2 outline outline-1 -outline-offset-1 outline-black/5 grid place-items-center -rotate-1 aspect-[4/5]">
+            <div className="relative bg-paper-2 ring-1 ring-ink/10 outline outline-1 -outline-offset-1 outline-black/5 grid place-items-center -rotate-1 aspect-[4/5]">
               <div className="text-center p-8">
                 <div className="size-20 mx-auto mb-4 rounded-full border-2 border-dashed border-ink/30 grid place-items-center">
                   <span className="text-3xl">📷</span>
@@ -410,17 +414,18 @@ function Index() {
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-soft absolute top-2 left-3">
                 fig.01 — arin
               </span>
+              <span className="tape-strip -top-3 left-6 -rotate-6" />
+              <span className="tape-strip -bottom-3 right-6 -rotate-3" />
             </div>
-            <span className="tape-strip -bottom-3 left-8 rotate-6" />
           </div>
           <div className="md:col-span-7">
-            <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-accent mb-4">
+            <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-blood mb-4">
               // sobre
             </div>
             <h2 className="font-display text-5xl sm:text-6xl leading-[0.9] tracking-tight text-balance mb-6">
               Desenho experiências que sobrevivem ao caos.
             </h2>
-            <div className="space-y-4 font-mono text-sm leading-relaxed text-paper/80 max-w-[52ch]">
+            <div className="space-y-4 font-mono text-sm leading-relaxed text-ink-soft max-w-[52ch]">
               <p className="text-pretty">
                 Sou Arin Kuramoto, designer de UX com anos criando produtos digitais. Trabalho na interseção entre pesquisa, estratégia e execução — onde o produto esbarra em sistemas legados, restrições reais e gente de verdade.
               </p>
@@ -432,10 +437,10 @@ function Index() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-wide">
-              <span className="border border-paper/30 px-2 py-1">Pesquisa</span>
-              <span className="border border-paper/30 px-2 py-1">Prototipagem</span>
-              <span className="border border-paper/30 px-2 py-1">Design System</span>
-              <span className="border border-grunge-accent text-grunge-accent px-2 py-1">
+              <span className="border border-ink/30 px-2 py-1">Pesquisa</span>
+              <span className="border border-ink/30 px-2 py-1">Prototipagem</span>
+              <span className="border border-ink/30 px-2 py-1">Design System</span>
+              <span className="border border-grunge-blood text-grunge-blood px-2 py-1">
                 Acessibilidade
               </span>
             </div>
@@ -456,7 +461,7 @@ function Index() {
             // entre em contato
           </div>
           <h2 className="font-display text-[11vw] sm:text-8xl leading-[0.85] tracking-tighter text-balance mb-6">
-            <span className="distressed-text text-paper">BORA</span>{" "}
+            <span className="tv-noise">BORA</span>{" "}
             <span className="text-paper">FAZER RUÍDO.</span>
           </h2>
           <p className="font-mono text-sm text-paper/70 max-w-[48ch] mb-8">

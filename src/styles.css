@@ -239,3 +239,50 @@
 .modal-enter {
   animation: modal-in 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+
+/* Old-TV static flicker headline */
+@keyframes tv-flicker {
+  0%, 100% { opacity: 1; transform: translateX(0); }
+  8% { opacity: 0.72; transform: translateX(-1px); }
+  10% { opacity: 1; transform: translateX(1.5px); }
+  27% { opacity: 0.85; transform: translateX(0); }
+  30% { opacity: 1; transform: translateX(-1px); }
+  62% { opacity: 0.6; transform: translateX(2px); }
+  64% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes tv-scan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(200%); }
+}
+
+.tv-noise {
+  position: relative;
+  display: inline-block;
+  color: var(--paper);
+  text-shadow:
+    -2px 0 0 color-mix(in oklch, var(--grunge-blood) 70%, transparent),
+    2px 0 0 color-mix(in oklch, var(--grunge-accent) 70%, transparent);
+  animation: tv-flicker 3.2s steps(1, end) infinite;
+}
+
+.tv-noise::after {
+  content: "";
+  position: absolute;
+  inset: -4% -2%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    color-mix(in oklch, var(--paper) 22%, transparent) 0 1px,
+    transparent 1px 4px
+  );
+  mix-blend-mode: overlay;
+  animation: tv-scan 2.4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tv-noise,
+  .tv-noise::after {
+    animation: none;
+  }
+}
