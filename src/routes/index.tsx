@@ -336,7 +336,7 @@ function Index() {
                 "grunge-card group relative p-5 cursor-pointer";
               const variantClasses =
                 project.variant === "dark"
-                  ? "bg-ink text-paper rotate-1 sm:mt-8"
+                  ? "bg-ink text-paper ring-1 ring-paper/25 rotate-1 sm:mt-8"
                   : project.variant === "accent"
                     ? "bg-grunge-accent text-ink -rotate-1"
                     : project.variant === "blood"
