@@ -285,20 +285,24 @@ function Index() {
         </div>
 
         {/* Marquee */}
-        <div className="absolute bottom-6 inset-x-0 overflow-hidden border-y border-ink/20 py-2 bg-paper-2">
+        <div className="relative mt-10 overflow-hidden border-y border-ink/20 py-2 bg-paper-2">
           <div className="marquee-track flex whitespace-nowrap font-mono text-xs uppercase tracking-[0.3em] text-ink-soft">
-            <span className="px-4">Grunge refinado ✕</span>
-            <span className="px-4">Zine 90s ✕</span>
-            <span className="px-4">Ray Gun ✕</span>
-            <span className="px-4">Brutalismo web ✕</span>
-            <span className="px-4">Skate art ✕</span>
-            <span className="px-4">Xerox ✕</span>
-            <span className="px-4">Grunge refinado ✕</span>
-            <span className="px-4">Zine 90s ✕</span>
-            <span className="px-4">Ray Gun ✕</span>
-            <span className="px-4">Brutalismo web ✕</span>
-            <span className="px-4">Skate art ✕</span>
-            <span className="px-4">Xerox ✕</span>
+            {[0, 1].map((dup) =>
+              [
+                "UX/UI",
+                "Front-end",
+                "Figma",
+                "JavaScript",
+                "React",
+                "Design Thinking",
+                "Service Design",
+                "UX Writing",
+              ].map((word) => (
+                <span key={`${dup}-${word}`} className="px-4">
+                  {word} ✕
+                </span>
+              )),
+            )}
           </div>
         </div>
       </header>
