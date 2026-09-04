@@ -216,10 +216,10 @@ function Index() {
         id="top"
         className="relative overflow-hidden bg-paper pt-24 pb-0"
       >
-        <div className="absolute -top-10 -left-6 text-[18rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden md:block">
+        <div className="absolute -top-8 -left-6 text-[12rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden md:block">
           UX
         </div>
-        <div className="absolute bottom-24 right-2 text-[10rem] leading-none font-display text-grunge-blood/10 select-none pointer-events-none hidden lg:block rotate-6">
+        <div className="absolute bottom-16 right-2 text-[7rem] leading-none font-display text-grunge-blood/10 select-none pointer-events-none hidden lg:block rotate-6">
           90s
         </div>
 
