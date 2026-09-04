@@ -395,14 +395,14 @@ function Index() {
       {/* Sobre */}
       <section
         id="sobre"
-        className="relative bg-ink text-paper py-20 sm:py-28 overflow-hidden"
+        className="relative bg-paper text-ink py-20 sm:py-28 overflow-hidden"
       >
-        <div className="absolute -right-10 top-10 text-[16rem] leading-none font-display text-paper/5 select-none pointer-events-none hidden lg:block rotate-90">
+        <div className="absolute -right-10 top-10 text-[16rem] leading-none font-display text-ink/5 select-none pointer-events-none hidden lg:block rotate-90">
           MEU
         </div>
         <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8 grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5 relative">
-            <div className="relative bg-paper-2 outline outline-1 -outline-offset-1 outline-black/5 grid place-items-center -rotate-1 aspect-[4/5]">
+            <div className="relative bg-paper-2 ring-1 ring-ink/10 outline outline-1 -outline-offset-1 outline-black/5 grid place-items-center -rotate-1 aspect-[4/5]">
               <div className="text-center p-8">
                 <div className="size-20 mx-auto mb-4 rounded-full border-2 border-dashed border-ink/30 grid place-items-center">
                   <span className="text-3xl">📷</span>
@@ -414,17 +414,18 @@ function Index() {
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-soft absolute top-2 left-3">
                 fig.01 — arin
               </span>
+              <span className="tape-strip -top-3 left-6 -rotate-6" />
+              <span className="tape-strip -bottom-3 right-6 -rotate-3" />
             </div>
-            <span className="tape-strip -bottom-3 left-8 rotate-6" />
           </div>
           <div className="md:col-span-7">
-            <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-accent mb-4">
+            <div className="font-mono text-xs uppercase tracking-[0.25em] text-grunge-blood mb-4">
               // sobre
             </div>
             <h2 className="font-display text-5xl sm:text-6xl leading-[0.9] tracking-tight text-balance mb-6">
               Desenho experiências que sobrevivem ao caos.
             </h2>
-            <div className="space-y-4 font-mono text-sm leading-relaxed text-paper/80 max-w-[52ch]">
+            <div className="space-y-4 font-mono text-sm leading-relaxed text-ink-soft max-w-[52ch]">
               <p className="text-pretty">
                 Sou Arin Kuramoto, designer de UX com anos criando produtos digitais. Trabalho na interseção entre pesquisa, estratégia e execução — onde o produto esbarra em sistemas legados, restrições reais e gente de verdade.
               </p>
@@ -436,10 +437,10 @@ function Index() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-wide">
-              <span className="border border-paper/30 px-2 py-1">Pesquisa</span>
-              <span className="border border-paper/30 px-2 py-1">Prototipagem</span>
-              <span className="border border-paper/30 px-2 py-1">Design System</span>
-              <span className="border border-grunge-accent text-grunge-accent px-2 py-1">
+              <span className="border border-ink/30 px-2 py-1">Pesquisa</span>
+              <span className="border border-ink/30 px-2 py-1">Prototipagem</span>
+              <span className="border border-ink/30 px-2 py-1">Design System</span>
+              <span className="border border-grunge-blood text-grunge-blood px-2 py-1">
                 Acessibilidade
               </span>
             </div>
@@ -460,7 +461,7 @@ function Index() {
             // entre em contato
           </div>
           <h2 className="font-display text-[11vw] sm:text-8xl leading-[0.85] tracking-tighter text-balance mb-6">
-            <span className="distressed-text text-paper">BORA</span>{" "}
+            <span className="tv-noise">BORA</span>{" "}
             <span className="text-paper">FAZER RUÍDO.</span>
           </h2>
           <p className="font-mono text-sm text-paper/70 max-w-[48ch] mb-8">
