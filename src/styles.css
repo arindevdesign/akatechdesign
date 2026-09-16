@@ -280,9 +280,35 @@
   animation: tv-scan 2.4s linear infinite;
 }
 
+.tv {
+  position: relative;
+  display: inline-block;
+  color: var(--paper);
+  text-shadow:
+    -2px 0 0 color-mix(in oklch, var(--grunge-blood) 70%, transparent),
+    2px 0 0 color-mix(in oklch, var(--grunge-accent) 70%, transparent);
+  animation: tv-flick 3.2s steps(1, end) infinite;
+}
+
+.tv::after {
+  content: "";
+  position: absolute;
+  inset: -4% -2%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    color-mix(in oklch, var(--paper) 22%, transparent) 0 1px,
+    transparent 1px 4px
+  );
+  mix-blend-mode: overlay;
+  animation: tv-scan 2.4s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tv-noise,
   .tv-noise::after,
+  .tv,
+  .tv::after,
   .marquee-track,
   .availability i {
     animation: none;
