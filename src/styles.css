@@ -431,3 +431,66 @@
 @media (hover: hover) and (pointer: fine) {
   .chroma-cursor-on, .chroma-cursor-on * { cursor: none !important; }
 }
+
+/* Sticker photos — no frames, just tilt + hard drop shadow */
+.hero-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: rotate(-4deg);
+  transform-origin: center bottom;
+  filter: drop-shadow(3px 6px 0 color-mix(in oklch, var(--ink) 22%, transparent));
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  align-self: end;
+}
+
+.hero-photo:hover {
+  transform: rotate(-1.5deg) scale(1.02);
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  transform: rotate(3deg);
+  transform-origin: center;
+  filter: drop-shadow(-3px 6px 0 color-mix(in oklch, var(--ink) 20%, transparent));
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.about-photo:hover {
+  transform: rotate(1deg) scale(1.02);
+}
+
+@media (min-width: 1024px) {
+  .hero-photo {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-photo {
+    width: 430px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-photo {
+    max-width: 500px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo,
+  .about-photo {
+    transition: none;
+  }
+  .hero-photo:hover,
+  .about-photo:hover {
+    transform: none;
+  }
+}
