@@ -176,10 +176,14 @@ function Index() {
       <div className="absolute -left-6 -top-8 hidden select-none font-display text-[12rem] leading-none text-ink/5 md:block">UX</div><div className="absolute bottom-16 right-2 hidden rotate-6 select-none font-display text-7xl leading-none text-grunge-blood/10 lg:block">UI</div>
       <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="mb-6 flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-ink-soft"><span className="bg-ink px-2 py-1 text-paper">UX/UI</span><span className="border border-ink/30 px-2 py-1">Design Thinking</span><span className="border border-ink/30 px-2 py-1">Service Design</span><span className="border border-ink/30 px-2 py-1">Front-end</span></div>
-        <div>
-          <div><h1 className="font-display text-[15vw] leading-[0.82] tracking-tight sm:text-[11vw] md:text-7xl"><span className="distressed-text block">ARIN</span><span className="-ml-2 block">KURAMOTO</span></h1>
-            <div className="relative mt-3 inline-block"><span className="tape-strip -left-6 -top-3 -rotate-12" /><p className="text-sm uppercase leading-relaxed sm:text-base">UX/UI e Front-end: criando interfaces completas e com personalidade</p></div>
+        <div className="grid gap-8 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_430px]">
+          <div>
+            <h1 className="font-display text-[15vw] leading-[0.82] tracking-tight sm:text-[11vw] md:text-7xl"><span className="distressed-text block">ARIN</span><span className="-ml-2 block">KURAMOTO</span></h1>
+            <div className="relative mt-4 inline-block"><p className="text-sm uppercase leading-relaxed sm:text-base">UX/UI e Front-end: criando interfaces completas e com personalidade</p></div>
             <div className="mt-6 flex flex-wrap gap-3 text-xs uppercase tracking-wide"><a href="#projetos" className="bg-ink px-4 py-2.5 text-paper hover:bg-grunge-blood">Ver projetos ↓</a><a href="#sobre" className="border-2 border-ink px-4 py-2 hover:bg-ink hover:text-paper">Quem é Arin</a><a href={cvAsset.url} download className="flex items-center gap-2 border-2 border-dashed border-grunge-blood px-4 py-2 font-bold text-grunge-blood hover:bg-grunge-blood hover:text-paper"><Download className="size-4" /> Baixar CV</a></div>
+          </div>
+          <div className="hidden lg:flex lg:items-end lg:justify-end">
+            <img src={heroImg.url} alt="Arin Kuramoto — retrato estilo sticker" className="hero-photo" />
           </div>
         </div>
       </div>
