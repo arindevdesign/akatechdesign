@@ -7,6 +7,8 @@ import project2Img from "../assets/project-2.jpg";
 import project3Img from "../assets/project-3.jpg";
 import project4Img from "../assets/project-4.jpg";
 import cvAsset from "../assets/cv-arin-kuramoto.pdf.asset.json";
+import aboutImg from "../assets/arin-about.png.asset.json";
+import heroImg from "../assets/arin-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
