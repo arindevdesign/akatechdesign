@@ -35,8 +35,8 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: "m1", title: "Ledger Brutal", category: "Finanças", year: "2024", variant: "light", image: project1Img,
-    description: "Redesenho do app bancário para reduzir abandono em fluxo de investimento.",
+    id: "m1", title: "Vantto", category: "MOBILE/FINANÇAS", year: "2024", variant: "light", image: project1Img,
+    description: "Desenho de app bancário da logo aos protótipos de alta fidelidade.",
     longDescription: "O app tinha 38% de abandono no fluxo de investimento. Mapei o funil, cortei 5 telas intermediárias e redesenhei a confirmação com linguagem direta.",
     tags: ["Pesquisa", "Wireframe", "Design System"],
     gallery: [{ image: project1Img, caption: "Tela de confirmação — versão final" }, { image: project2Img, caption: "Wireframe do funil" }],
@@ -48,8 +48,8 @@ const projects: Project[] = [
     ], outcome: { value: "−22%", label: "Abandono no fluxo · NPS +14" },
   },
   {
-    id: "m2", title: "Trânsito Cru", category: "Mobilidade", year: "2023", variant: "dark", image: project2Img,
-    description: "Sistema de navegação urbana com mapa em camadas e modo offline.",
+    id: "m2", title: "Raiz&Grão", category: "LANDPAGE", year: "2023", variant: "dark", image: project2Img,
+    description: "Site de e-commerce descontraído focado em cafés artesanais e gourmet.",
     longDescription: "App de mobilidade urbana para usuários com conectividade instável. Criei um mapa em camadas com cache inteligente e rotas alternativas.",
     tags: ["UX Research", "Mapa", "Offline-first"], gallery: [{ image: project2Img, caption: "Mapa em camadas" }],
     process: [
@@ -60,8 +60,8 @@ const projects: Project[] = [
     ], outcome: { value: "+40%", label: "Uso em áreas periféricas" },
   },
   {
-    id: "m3", title: "Console Sujo", category: "Dev Tool", year: "2023", variant: "light", image: project3Img,
-    description: "Painel de monitoramento para devs com logs densos e atalhos de teclado.",
+    id: "m3", title: "Languagie", category: "MOBILE", year: "2023", variant: "light", image: project3Img,
+    description: "Aplicativo de ensino de idiomas intuitivo para todas as idades.",
     longDescription: "Dashboard de observabilidade com alta densidade de informação. Simplifiquei a hierarquia visual e adicionei atalhos de teclado.",
     tags: ["Dashboard", "Acessibilidade", "Atalhos"], gallery: [{ image: project3Img, caption: "Grid de densidade alta" }],
     process: [
@@ -72,8 +72,8 @@ const projects: Project[] = [
     ], outcome: { value: "−27%", label: "Tempo de resposta a incidentes" },
   },
   {
-    id: "m4", title: "Carrinho Rápido", category: "E-commerce", year: "2022", variant: "blood", image: project4Img,
-    description: "Checkout em um passo que elevou conversão em 18% sem mudar o visual.",
+    id: "m4", title: "Nimbus Tech", category: "B2B/B2C", year: "2022", variant: "blood", image: project4Img,
+    description: "Site/app focado na gestão e manutenção de projetos ágeis em empresas tech.",
     longDescription: "Checkout legado com múltiplos passos e alta taxa de abandono. Reduzi a jornada a uma única página com preenchimento automático e confirmação clara.",
     tags: ["Checkout", "Conversão", "Mobile"], gallery: [{ image: project4Img, caption: "Checkout em página única" }],
     process: [
@@ -84,8 +84,8 @@ const projects: Project[] = [
     ], outcome: { value: "+18%", label: "Conversão no primeiro mês" },
   },
   {
-    id: "m5", title: "Arquivo Vivo", category: "Educação", year: "2024", variant: "light", image: project3Img,
-    description: "Plataforma de estudo com trilha personalizada e progresso visível.",
+    id: "m5", title: "Ateliê Bittencourt", category: "LANDPAGE", year: "2024", variant: "light", image: project3Img,
+    description: "Landpage criada para profissional de costura e moda.",
     longDescription: "Alunos abandonavam o curso antes do meio. Reorganizei a trilha em módulos curtos com progresso explícito e revisão espaçada.",
     tags: ["UX Research", "Gamificação", "Acessibilidade"], gallery: [{ image: project3Img, caption: "Trilha de módulos" }],
     process: [
@@ -96,8 +96,8 @@ const projects: Project[] = [
     ], outcome: { value: "+26%", label: "Conclusão de módulos" },
   },
   {
-    id: "m6", title: "Palco Torto", category: "Eventos", year: "2023", variant: "blood", image: project4Img,
-    description: "Inscrição de eventos em um formulário que cortou a evasão pela metade.",
+    id: "m6", title: "Daraverso", category: "SITE DE ESCRITA", year: "2023", variant: "blood", image: project4Img,
+    description: "Criação de site estilo Spirit Fanfiction dedicado ao meu próprio universo literário",
     longDescription: "Formulário de inscrição longo derrubava a conversão. Reduzi os campos obrigatórios, validei em tempo real e confirmei com resumo claro.",
     tags: ["Conversão", "Formulário", "Mobile"], gallery: [{ image: project4Img, caption: "Inscrição em uma tela" }],
     process: [
