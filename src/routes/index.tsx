@@ -83,7 +83,32 @@ const projects: Project[] = [
       { title: "Entrega", description: "Rollout gradual acompanhado de dashboard de conversão por etapa, com critério de rollback definido antes de subir." },
     ], outcome: { value: "+18%", label: "Conversão no primeiro mês" },
   },
+  {
+    id: "m5", title: "Arquivo Vivo", category: "Educação", year: "2024", variant: "light", image: project3Img,
+    description: "Plataforma de estudo com trilha personalizada e progresso visível.",
+    longDescription: "Alunos abandonavam o curso antes do meio. Reorganizei a trilha em módulos curtos com progresso explícito e revisão espaçada.",
+    tags: ["UX Research", "Gamificação", "Acessibilidade"], gallery: [{ image: project3Img, caption: "Trilha de módulos" }],
+    process: [
+      { title: "Descoberta", description: "Entrevistei 9 alunos que desistiram e revisei 3 meses de logs de acesso. O abandono não era falta de tempo, era não saber onde estava nem quanto faltava." },
+      { title: "Definição", description: "Concentre o esforço em visibilidade de progresso: o aluno precisa ver onde chegou e qual é o próximo passo sem procurar." },
+      { title: "Prototipagem", description: "Protótipo de trilha em módulos curtos com barra de progresso e revisão espaçada. Testei com 7 alunos em duas sessões de uso guiado." },
+      { title: "Entrega", description: "Componentes de progresso documentados, estados de conclusão acessíveis e plano de acompanhamento de retenção a 30 dias." },
+    ], outcome: { value: "+26%", label: "Conclusão de módulos" },
+  },
+  {
+    id: "m6", title: "Palco Torto", category: "Eventos", year: "2023", variant: "blood", image: project4Img,
+    description: "Inscrição de eventos em um formulário que cortou a evasão pela metade.",
+    longDescription: "Formulário de inscrição longo derrubava a conversão. Reduzi os campos obrigatórios, validei em tempo real e confirmei com resumo claro.",
+    tags: ["Conversão", "Formulário", "Mobile"], gallery: [{ image: project4Img, caption: "Inscrição em uma tela" }],
+    process: [
+      { title: "Descoberta", description: "Análise de 2.800 inscrições abandonadas + 6 testes de usabilidade. A desistência se concentrava na etapa de dados de pagamento, sempre após um erro de validação." },
+      { title: "Definição", description: "Restrição do negócio: manter os campos de cobrança. Todo o ganho tinha que vir de ordem, validação e clareza, não de cortar requisitos." },
+      { title: "Prototipagem", description: "Protótipo de uma tela com validação inline, preenchimento automático e recuperação de erro sem perder dado. Teste A/B com metade do tráfego." },
+      { title: "Entrega", description: "Rollout gradual com painel de conversão por etapa e critério de rollback acordado antes de publicar." },
+    ], outcome: { value: "−48%", label: "Evasão na inscrição" },
+  },
 ];
+
 
 const skills = ["UX/UI", "Front-end", "Figma", "React", "Angular", "TypeScript", "Design Thinking", "Service Design"];
 const socialLinks = {
