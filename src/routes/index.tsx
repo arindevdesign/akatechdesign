@@ -9,6 +9,7 @@ import project4Img from "../assets/project-4.jpg";
 import cvAsset from "../assets/cv-arin-kuramoto.pdf.asset.json";
 import aboutImg from "../assets/arin-about.png.asset.json";
 import heroImg from "../assets/arin-hero.png.asset.json";
+import daraverseImg from "../assets/daraverse-screenshot.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -96,10 +97,10 @@ const projects: Project[] = [
     ], outcome: { value: "+26%", label: "Conclusão de módulos" },
   },
   {
-    id: "m6", title: "Daraverso", category: "SITE DE ESCRITA", year: "2023", variant: "blood", image: project4Img,
+    id: "m6", title: "Daraverso", category: "SITE DE ESCRITA", year: "2023", variant: "blood", image: daraverseImg.url,
     description: "Criação de site estilo Spirit Fanfiction dedicado ao meu próprio universo literário",
     longDescription: "Formulário de inscrição longo derrubava a conversão. Reduzi os campos obrigatórios, validei em tempo real e confirmei com resumo claro.",
-    tags: ["Conversão", "Formulário", "Mobile"], gallery: [{ image: project4Img, caption: "Inscrição em uma tela" }],
+    tags: ["Conversão", "Formulário", "Mobile"], gallery: [{ image: daraverseImg.url, caption: "Catálogo do Daraverse no ar" }],
     process: [
       { title: "Descoberta", description: "Análise de 2.800 inscrições abandonadas + 6 testes de usabilidade. A desistência se concentrava na etapa de dados de pagamento, sempre após um erro de validação." },
       { title: "Definição", description: "Restrição do negócio: manter os campos de cobrança. Todo o ganho tinha que vir de ordem, validação e clareza, não de cortar requisitos." },
