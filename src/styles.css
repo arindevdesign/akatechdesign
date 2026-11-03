@@ -380,6 +380,7 @@
 }
 
 .fiction-label::before { content: "⚠"; }
+.fiction-label.is-real::before { content: none; }
 .fiction-label > span {
   position: absolute;
   top: calc(100% + 8px);

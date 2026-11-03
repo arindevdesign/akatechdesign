@@ -30,7 +30,7 @@ interface GalleryItem { image: string; caption: string }
 interface Project {
   id: string; title: string; category: string; year: string;
   description: string; longDescription: string; tags: string[]; image: string;
-  variant: "light" | "dark" | "blood"; gallery: GalleryItem[];
+  variant: "light" | "dark" | "blood"; status?: "real" | "ficticio"; gallery: GalleryItem[];
   process: ProjectStep[]; outcome: { value: string; label: string };
 }
 
@@ -97,7 +97,7 @@ const projects: Project[] = [
     ], outcome: { value: "+26%", label: "Conclusão de módulos" },
   },
   {
-    id: "m6", title: "Daraverso", category: "SITE DE ESCRITA", year: "2023", variant: "blood", image: daraverseImg.url,
+    id: "m6", title: "Daraverso", category: "SITE DE ESCRITA", year: "2023", variant: "blood", image: daraverseImg.url, status: "real",
     description: "Criação de site estilo Spirit Fanfiction dedicado ao meu próprio universo literário",
     longDescription: "Formulário de inscrição longo derrubava a conversão. Reduzi os campos obrigatórios, validei em tempo real e confirmei com resumo claro.",
     tags: ["Conversão", "Formulário", "Mobile"], gallery: [{ image: daraverseImg.url, caption: "Catálogo do Daraverse no ar" }],
@@ -218,7 +218,7 @@ function Index() {
 
     <section id="projetos" className="relative overflow-hidden bg-ink py-20 text-paper sm:py-28"><div className="relative mx-auto max-w-[1200px] px-5 sm:px-8"><div className="mb-10"><div className="mb-3 text-xs uppercase tracking-[0.25em] text-grunge-accent">// projetos selecionados</div><h2 className="font-display text-5xl leading-[0.9] sm:text-6xl">Desenvolvidos com intenção.</h2></div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{projects.map((project) => { const dark = project.variant !== "light"; return <article key={project.id} onClick={() => setActiveProject(project)} className={`grunge-card group relative cursor-pointer p-5 ${project.variant === "light" ? "-rotate-1 bg-paper-2 text-ink ring-1 ring-ink/10" : project.variant === "dark" ? "rotate-1 bg-ink text-paper ring-1 ring-paper/25 sm:mt-8" : "rotate-1 bg-grunge-blood text-paper sm:mt-8"}`}>
-        <div className="relative mb-4"><span className="fiction-label" tabIndex={0}>Fictício<span>Projeto fictício — criado para demonstrar o layout. Cases reais em breve.</span></span><img src={project.image} alt={project.title} className="aspect-[16/10] w-full bg-paper object-cover" loading="lazy" /></div>
+        <div className="relative mb-4">{project.status === "real" ? <span className="fiction-label is-real">Real</span> : <span className="fiction-label" tabIndex={0}>Fictício<span>Projeto fictício — criado para demonstrar o layout. Cases reais em breve.</span></span>}<img src={project.image} alt={project.title} className="aspect-[16/10] w-full bg-paper object-cover" loading="lazy" /></div>
         <div className={`mb-2 flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] ${dark ? "text-paper/60" : "text-ink-soft"}`}><span className={`px-1.5 py-0.5 ${project.variant === "dark" ? "bg-grunge-accent text-ink" : project.variant === "blood" ? "bg-ink text-paper" : "bg-grunge-blood text-paper"}`}>{project.category}</span></div>
         <h3 className="font-display text-3xl leading-none">{project.title}</h3><p className={`mt-2 text-xs leading-relaxed ${dark ? "text-paper/60" : "text-ink-soft"}`}>{project.description}</p><button type="button" className={`project-card-cta mt-4 px-3 py-2 text-xs font-bold uppercase tracking-wide transition-colors focus-visible:outline-2 focus-visible:outline-grunge-accent focus-visible:outline-offset-2 ${project.variant === "dark" ? "bg-grunge-accent text-ink hover:bg-paper" : project.variant === "blood" ? "bg-ink text-paper hover:bg-grunge-accent hover:text-ink" : "bg-ink text-paper hover:bg-grunge-blood"}`}>Saber mais →</button>
       </article>; })}</div>
