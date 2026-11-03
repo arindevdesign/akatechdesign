@@ -129,7 +129,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
       <div className="modal-enter relative max-h-[90vh] w-full max-w-2xl overflow-y-auto bg-paper p-6 text-ink ring-1 ring-ink/10 sm:p-8">
         <button type="button" onClick={onClose} className="absolute right-3 top-3 z-10 grid size-8 place-items-center border border-ink bg-paper transition-colors hover:bg-ink hover:text-paper" aria-label="Fechar"><X className="size-4" /></button>
         <span className="tape-strip -top-3 left-10 -rotate-3" />
-        <div className="mb-3 inline-flex items-center gap-1.5 bg-grunge-accent px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">⚠ Projeto fictício</div>
+        <div className="mb-3 inline-flex items-center gap-1.5 bg-grunge-accent px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">{project.status === "real" ? "Real" : "⚠ Projeto fictício"}</div>
         <div className="mb-2 text-[10px] uppercase tracking-[0.25em] text-grunge-blood">Dossiér · {project.category} · {project.year}</div>
         <h3 id={`modal-${project.id}`} className="font-display text-4xl leading-none sm:text-5xl">{project.title}</h3>
         <div className="mt-1 text-xs uppercase text-ink-soft">Case study · {project.year} · {project.category}</div>
