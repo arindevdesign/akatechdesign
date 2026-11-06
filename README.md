@@ -1,7 +1,5 @@
 # Arin's Grunge Portfolio
 
-Crie um site-portfólio com tema/estilo grunge com as seções: sobre mim (meu nome é Arin Kuramoto e trabalho com UX, pode gerar um texto generico e depois substituo) , projetos (em formato cards e com animações, e quando a pessoa clicar abre uma modal maior explicando sobre o projeto), e entre em contato com informações de e-mail e um rodapé criativo com links para github, behance e @connector:linkedin:"LinkedIn" (ícones)
-
 This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://akatechdesign.lovable.app
